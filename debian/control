@@ -1,7 +1,7 @@
 Source: rpi-chromium-mods
 Section: unknown
 Priority: optional
-Maintainer: Simon Long <simon@raspberrypi.org>
+Maintainer: dev@kano.me
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
 Homepage: <insert the upstream URL, if relevant>
