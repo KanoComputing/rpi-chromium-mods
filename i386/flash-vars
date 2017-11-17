@@ -1,0 +1,2 @@
+export CHROMIUM_FLAGS="--ppapi-flash-path=/usr/lib/chromium/libpepflashplayer.so --ppapi-flash-args=enable_stagevideo_auto=0"
+
