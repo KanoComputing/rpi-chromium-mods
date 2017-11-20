@@ -10,7 +10,7 @@ Homepage: <insert the upstream URL, if relevant>
 
 Package: rpi-chromium-mods-kano
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, chromium-browser
+Depends: ${shlibs:Depends}, ${misc:Depends}, chromium-browser (>= 55) [armhf], chromium (>= 55) [!armhf]
 Replaces: chromium-browser, rpi-chromium-mods
 Provides: rpi-chromium-mods
 Description: Raspberry Pi-specific mods to Chromium
