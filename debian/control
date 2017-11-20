@@ -11,7 +11,8 @@ Homepage: <insert the upstream URL, if relevant>
 Package: rpi-chromium-mods-kano
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, chromium-browser
-Replaces: chromium-browser
+Replaces: chromium-browser, rpi-chromium-mods
+Provides: rpi-chromium-mods
 Description: Raspberry Pi-specific mods to Chromium
  Package contains Raspberry Pi-specific modifications to the
  default Chromium browser install, including optimized settings
