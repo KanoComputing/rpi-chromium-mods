@@ -1,2 +1,5 @@
-CHROMIUM_FLAGS="--disable-quic --enable-fast-unload --enable-tcp-fast-open --disable-gpu-compositing --ppapi-flash-version=26.0.0.151"
-
+if grep -q ARMv6 /proc/cpuinfo; then
+	CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --disable-quic --enable-tcp-fast-open --disable-gpu-compositing"
+else
+	CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --disable-quic --enable-tcp-fast-open --disable-gpu-compositing --ppapi-flash-path=/usr/lib/chromium-browser/libpepflashplayer.so --ppapi-flash-args=enable_stagevideo_auto=0 --ppapi-flash-version="
+fi

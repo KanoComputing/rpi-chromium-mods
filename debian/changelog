@@ -1,3 +1,142 @@
+rpi-chromium-mods (20190103) stretch; urgency=medium
+
+  * Version 32.0.0.114 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 03 Jan 2019 08:55:22 +0000
+
+rpi-chromium-mods (20181204) stretch; urgency=medium
+
+  * Version 32.0.0.101 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 04 Dec 2018 14:46:34 +0000
+
+rpi-chromium-mods (20181120) stretch; urgency=medium
+
+  * Version 31.0.0.153 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 20 Nov 2018 14:07:30 +0000
+
+rpi-chromium-mods (20181108) stretch; urgency=medium
+
+  * Version 31.0.0.148 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 08 Nov 2018 15:22:47 +0000
+
+rpi-chromium-mods (20181008) stretch; urgency=medium
+
+  * Version 31.0.0.122 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 08 Oct 2018 15:45:12 +0100
+
+rpi-chromium-mods (20180910) stretch; urgency=medium
+
+  * Version 31.0.0.108 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 10 Sep 2018 13:06:00 +0100
+
+rpi-chromium-mods (20180817) stretch; urgency=medium
+
+  * Version 3.0.0.154 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 17 Aug 2018 10:22:32 +0100
+
+rpi-chromium-mods (20180706) stretch; urgency=medium
+
+  * Version 30.0.0.134 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 06 Jul 2018 07:35:05 +0100
+
+rpi-chromium-mods (20180626) stretch; urgency=medium
+
+  * Remove PepperFlash command-line args when on Pi 0 or 1
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 26 Jun 2018 13:15:29 +0100
+
+rpi-chromium-mods (20180605) stretch; urgency=medium
+
+  * Version 30.0.0.113 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 05 Jun 2018 09:23:11 +0100
+
+rpi-chromium-mods (20180516) stretch; urgency=medium
+
+  * Modifications for compatibility with Chromium 65
+
+ -- Simon Long <simon@raspberrypi.org>  Wed, 16 May 2018 13:15:59 +0100
+
+rpi-chromium-mods (20180509) stretch; urgency=medium
+
+  * Version 29.0.0.171 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Wed, 09 May 2018 07:30:12 +0100
+
+rpi-chromium-mods (20180409) stretch; urgency=medium
+
+  * Version 29.0.0.140 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 09 Apr 2018 07:16:33 +0100
+
+rpi-chromium-mods (20180302) stretch; urgency=medium
+
+  * Version 29.0.0.113 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 02 Mar 2018 08:39:04 +0000
+
+rpi-chromium-mods (20180207) stretch; urgency=medium
+
+  * Version 28.0.0.161 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Wed, 07 Feb 2018 11:39:10 +0000
+
+rpi-chromium-mods (20180112) stretch; urgency=medium
+
+  * Version 28.0.0.137 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Fri, 12 Jan 2018 10:54:42 +0000
+
+rpi-chromium-mods (20171113) stretch; urgency=medium
+
+  * Version 27.0.0.187 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 13 Nov 2017 14:52:19 +0000
+
+rpi-chromium-mods (20171107) stretch; urgency=medium
+
+  * Correct Flash version number in command line vars
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 07 Nov 2017 15:04:25 +0000
+
+rpi-chromium-mods (20171026) stretch; urgency=medium
+
+  * Version 27.0.0.183 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 26 Oct 2017 07:09:57 +0100
+
+rpi-chromium-mods (20171017) stretch; urgency=medium
+
+  * Version 27.0.0.170 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 17 Oct 2017 08:46:42 +0100
+
+rpi-chromium-mods (20171016) stretch; urgency=medium
+
+  * Version 27.0.0.159 of Flash player included
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 16 Oct 2017 07:45:21 +0100
+
+rpi-chromium-mods (20170913) stretch; urgency=medium
+
+  * Various install tweaks for x86/x64 versions
+
+ -- Simon Long <simon@raspberrypi.org>  Wed, 13 Sep 2017 07:52:28 +0100
+
+rpi-chromium-mods (20170911) stretch; urgency=medium
+
+  * Version 27.0.0.130 of Flash player included
+  * Location of i386 master_preferences file updated for Chromium 60
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 11 Sep 2017 12:01:37 +0100
+
 rpi-chromium-mods (20170809) stretch; urgency=medium
 
   * Add Flash player version flag to fix Chromium warning

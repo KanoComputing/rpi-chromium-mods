@@ -7,22 +7,6 @@
 			"cjpalhdlnbpafiamejdnhcphjbkeiagm" : {
 				"location":1,
 				"manifest": {
-                    "content_scripts": [ {
-                        "all_frames": true,
-                        "js": [ "js/vapi-client.js", "js/contentscript-start.js" ],
-                        "matches": [ "http://*/*", "https://*/*" ],
-                        "run_at": "document_start"
-                    }, {
-                        "all_frames": true,
-                        "js": [ "js/contentscript-end.js" ],
-                        "matches": [ "http://*/*", "https://*/*" ],
-                        "run_at": "document_end"
-                    }, {
-                        "all_frames": false,
-                        "js": [ "js/scriptlets/subscriber.js" ],
-                        "matches": [ "http://*/*", "https://*/*" ],
-                        "run_at": "document_idle"
-                    } ],
 					"key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmJNzUNVjS6Q1qe0NRqpmfX/oSJdgauSZNdfeb5RV1Hji21vX0TivpP5gq0fadwmvmVCtUpOaNUopgejiUFm/iKHPs0o3x7hyKk/eX0t2QT3OZGdXkPiYpTEC0f0p86SQaLoA2eHaOG4uCGi7sxLJmAXc6IsxGKVklh7cCoLUgWEMnj8ZNG2Y8UKG3gBdrpES5hk7QyFDMraO79NmSlWRNgoJHX6XRoY66oYThFQad8KL8q3pf3Oe8uBLKywohU0ZrDPViWHIszXoE9HEvPTFAbHZ1umINni4W/YVs+fhqHtzRJcaKJtsTaYy+cholu5mAYeTZqtHf6bcwJ8t9i2afwIDAQAB",
 					"name":"uBlock Origin",
 					"permissions": [ "contextMenus", "privacy", "storage", "tabs", "unlimitedStorage", "webNavigation", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*" ],
@@ -40,22 +24,16 @@
 			"aleakchihdccplidncghkekgioiakgal" : {
 				"location":1,
 				"manifest": {
-                    "content_scripts": [ {
-                        "all_frames": true,
-                        "js": [ "src/inject/inject.js", "src/inject/content_script.js" ],
-                        "matches": [ "*://*.youtube.com/*" ],
-                        "run_at": "document_start"
-                    } ],
                     "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxpuYJpBArlJinXxN4oxx4UuFNreRTNO5Cl3TNF5FtDmgNLflbtYyC2nC5eZGxpNibzauHmGTD8ekFCfNZhHFpUEIZWd9AHI7TZdhu6gPxaK1lPEMukVEewFs2ovaEkjZbe3gy3v0eUDnADUkiaex7XeAWR6mJLzmcUaPFgzFRsDkozsE9tXLNN6oEYuWHN/yRsM1RYo7PYPulutHF8POL/8vDSyWHx/W9YDTnbv+2SBJZO7Dxi1/PbutasUag+/jma0X1nGhrEufr67NMvtpjPWSISWkIwxPR8u7EVyrKTSXs6U7jCbhKedhomeu9E/xZ1Er0dGWYWnhpdo0GNvblwIDAQAB",
 					"name":"h264ify",
-                    "permissions": [ "storage" ],
+					"permissions": [ "storage" ],
 					"update_url":"https://clients2.google.com/service/update2/crx",
 					"version":"0.0"
 				},
 				"granted_permissions": {
 					"api": [ "storage" ],
 					"manifest_permissions": [],
-					"scriptable_host": ["*://*.youtube.com/*"]
+					"scriptable_host": [ "*://*.youtube.com/*", "*://*.youtube-nocookie.com/*", "*://*.youtu.be/*" ]
 				},
 				"path":"aleakchihdccplidncghkekgioiakgal\\0.0",
 				"state":1

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ARCH=$(dpkg --print-architecture)
+
+if [ "$ARCH" !=  "armhf" ] ; then
+	dpkg-divert --package rpi-chromium-mods --divert /usr/share/chromium/master_preferences.bak --rename /usr/share/chromium/master_preferences
+	dpkg-maintscript-helper rm_conffile /etc/chromium/master_preferences 20170809 -- "$@"
+fi
+
+

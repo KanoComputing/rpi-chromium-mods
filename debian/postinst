@@ -2,6 +2,8 @@
 
 set -e
 
+ARCH=$(dpkg --print-architecture)
+
 case "$1" in
   configure)
       if [ -e /usr/bin/chromium-browser ] ; then
@@ -11,10 +13,16 @@ case "$1" in
       if [ -e /usr/bin/chromium ] ; then
 	    update-alternatives --install /usr/bin/x-www-browser x-www-browser /usr/bin/chromium 60
       fi
-
-      if [ -e /home/pi/.config/chromium/Default/Preferences ] ; then
-        sed /home/pi/.config/chromium/Default/Preferences -i -e 's/"default_content_setting_values":{"plugins":2}/"default_content_setting_values":{"plugins":0}/'
-      fi
+      getent passwd | while read line; do
+        USHELL=$(echo $line | cut -d: -f7)
+        if grep -q $USHELL /etc/shells ; then
+          HOME_DIR=$(echo $line | cut -d: -f6)/
+          PREF_FILE=${HOME_DIR}.config/chromium/Default/Preferences
+          if [ -f "$PREF_FILE" ] ; then
+            sed "$PREF_FILE" -i -e 's/"default_content_setting_values":{"plugins":2}/"default_content_setting_values":{"plugins":0}/'
+          fi
+        fi
+      done
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)
@@ -25,6 +33,10 @@ case "$1" in
       exit 1
   ;;
 esac
+
+if [ "$ARCH" != "armhf" ] ; then
+  dpkg-maintscript-helper rm_conffile /etc/chromium/master_preferences 20170809 -- "$@"
+fi
 
 
 
