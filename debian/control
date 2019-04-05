@@ -1,0 +1,13 @@
+Package: rpi-chromium-mods
+Version: 20170809
+Architecture: armhf
+Maintainer: Simon Long <simon@raspberrypi.org>
+Installed-Size: 19974
+Depends: debconf, libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.9), debconf (>= 0.5) | debconf-2.0, chromium-browser (>= 55)
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: Raspberry Pi-specific mods to Chromium
+ Package contains Raspberry Pi-specific modifications to the
+ default Chromium browser install, including optimized settings
+ and command-line flags. Also sets chromium as the default browser.
