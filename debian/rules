@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
+
+override_dh_install:
+ifeq ($(DEB_TARGET_ARCH),armhf)
+	mkdir -p debian/rpi-chromium-mods-kano/etc/chromium-browser/customizations/
+	cp -ax armhf/00-rpi-vars debian/rpi-chromium-mods-kano/etc/chromium-browser/customizations/
+	mkdir -p debian/rpi-chromium-mods-kano/usr/lib/chromium-browser/
+	cp -ax armhf/master_preferences debian/rpi-chromium-mods-kano/usr/lib/chromium-browser/
+	cp -ax armhf/libpepflashplayer.so debian/rpi-chromium-mods-kano/usr/lib/chromium-browser/
+	cp -ax armhf/flash_manifest.json debian/rpi-chromium-mods-kano/usr/lib/chromium-browser/
+	cp -ax armhf/Flash.htm debian/rpi-chromium-mods-kano/usr/lib/chromium-browser/
+endif
+	dh_install
+
+override_dh_strip:
+	dh_strip --exclude=pepflash
+
+override_dh_shlibdeps:
+ifeq ($(DEB_TARGET_ARCH),armhf)
+	dh_shlibdeps
+endif
+
+%:
+	dh $@
